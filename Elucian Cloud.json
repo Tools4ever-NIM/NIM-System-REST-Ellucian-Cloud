@@ -1,0 +1,456 @@
+{
+    "schema": {
+        "options": {},
+        "crud_objects": {
+            "Academic_Catalogs": {
+                "operations": {
+                    "PersonsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/academic-catalogs"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "id",
+                "resources": {
+                    "metadata": {
+                        "createdBy": "_:string*",
+                        "createdOn": "_:string*",
+                        "modifiedBy": "_:string*",
+                        "modifiedOn": "_:string*"
+                      },
+                      "id": "string*",
+                      "title": "string*",
+                      "description": "string*",
+                      "code": "string*",
+                      "startOn": "string*",
+                      "endOn": "string*",
+                      "status": "string*",
+                      "institution": {
+                        "id": "_:string*"
+                      },
+                      "academicPrograms": [
+                        {
+                          "id": "string*"
+                        }
+                      ]
+                }
+            },
+            "Email_Types": {
+                "operations": {
+                    "PersonsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/email-types"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "id",
+                "resources": {
+                    "metadata": {
+                        "createdBy": "_:string*",
+                        "createdOn": "_:string*",
+                        "modifiedBy": "_:string*",
+                        "modifiedOn": "_:string*"
+                      },
+                      "id": "string*",
+                      "title": "string*",
+                      "description": "string*",
+                      "code": "string*",
+                      "emailType": "string*"
+                }
+            },
+            "Persons": {
+                "operations": {
+                    "PersonsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/persons"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "id",
+                "resources": {
+                    "id": "string*",
+                    "privacyStatus": {
+                        "privacyCategory": "_:string*",
+                        "detail": {
+                            "id": "_:string*"
+                        }
+                    },
+                    "names": [
+                        {
+                            "type": {
+                                "category": "_:string*",
+                                "detail": {
+                                  "id": "_:string*"
+                                }
+                            },
+                            "fullName": "string*",
+                            "title": "string*",
+                            "firstName": "string*",
+                            "middleName": "string*",
+                            "lastNamePrefix": "string*",
+                            "lastName": "string*",
+                            "pedigree": "string*",
+                            "professionalAbbreviations": "string*",
+                            "preference": "string*"
+                        }
+                    ],
+                    "dateOfBirth": "string*",
+                    "dateDeceased": "string*",
+                    "gender": "string*",
+                    "genderMarker": {
+                        "id": "_:string*"    
+                    },
+                    "genderIdentity": {
+                        "id": "_:string*"    
+                    },
+                    "religion": {
+                        "id": "_:string*"    
+                    },
+                    "personalPronoun": {
+                        "id": "_:string*"    
+                    },
+                    "ethnicity": {
+                        "ethnicGroup": {
+                            "id": "_:string*"
+                        },
+                        "reporting": {
+                            "country": {
+                                "code": "_:string*",
+                                "ethnicCategory": "_:string"
+                            }
+                        }
+                    },
+                    "races": [
+                        {
+                            "race": {
+                                "id":"_:string*"
+                            },
+                            "country": {
+                                "code": "_:string*",
+                                "racialCategory": "_:string"
+                            }
+                        }
+                    ],
+                    "languages": [
+                        {
+                            "code": "_:string*",
+                            "preference": "_:string*"
+                        }
+                    ],
+                    "maritalStatus": {
+                        "maritalCategory": "_:string*",
+                        "detail": {
+                            "id": "_:string*"
+                        }
+                    },
+                    "veteranStatus": {
+                        "category": "_:string*",
+                        "detail": {
+                            "id": "_:string*"
+                        }
+                    },
+                    "citizenshipStatus": {
+                        "category": "_:string*",
+                        "detail": {
+                            "id": "_:string*"
+                        }
+                    },
+                    "countryOfBirth": "string*",
+                    "citizenshipCountry": "string*",
+                    "role": [
+                        {
+                            "role": "_:string*",
+                            "startOn": "_:string*",
+                            "endOn": "_:string*"
+                        }
+                    ],
+                    "identityDocuments": [
+                        {
+                            "country": {
+                                "code": "_:string*",
+                                "region": "_:string*"
+                            },
+                            "type": {
+                                "category": "_:string*",
+                                "detail": {
+                                    "id": "_:string*"
+                                }
+                            },
+                            "documentId": "string*",
+                            "expiresOn": "string*"
+                        }
+                    ],
+                    "credentials": {
+                        "type": "_:string*",
+                        "value": "_:string*",
+                        "startOn": "_:string*",
+                        "endOn": "_:string*"
+                    },
+                    "alternativeCredentials": {
+                        "type": "_:string*",
+                        "value": "_:string*"
+                    },
+                    "addresses": [
+                        {
+                            "address": {
+                                "id": "_:string*",
+                                "addressLines": ["_:string*"],
+                                "place": {
+                                    "country": {
+                                        "code": "_:string*",
+                                        "title": "_:string*",
+                                        "postalTitle": "_:string*",
+                                        "region": {
+                                            "code": "_:string*",
+                                            "title": "_string*"
+                                        },
+                                        "subRegion": {
+                                            "code": "_:string*",
+                                            "title": "_string*"
+                                        },
+                                        "locality": "_:string*",
+                                        "postalCode": "_:string*",
+                                        "deliveryPoint": "_:string*",
+                                        "carrierRoute": "_:string*",
+                                        "correctionDigit": "_:string*"
+                                    },
+                                    "latitude": "string*",
+                                    "longitude": "string*",
+                                    "geographicAreas": [
+                                        {
+                                            "id": "string*"
+                                        }
+                                    ]
+                                }
+
+                            },
+                            "type": {
+                                "addressType": "_:string*",
+                                "detail": {
+                                    "id": "_:string*"
+                                }
+                            },
+                            "startOn": "string*",
+                            "endOn": "string*",
+                            "preference": "string*",
+                            "seasonalOccupancies": [
+                                {
+                                  "recurrence": {
+                                    "timePeriod": {
+                                      "startOn": "_:string*",
+                                      "endOn": "_:string*"
+                                    },
+                                    "repeatRule": "_:string*"
+                                  }
+                                }
+                              ]
+                        }
+                    ],
+                    "phones": [
+                        {
+                          "type": {
+                            "phoneType": "_:string*",
+                            "detail": {
+                              "id": "_:string*"
+                            }
+                          },
+                          "countryCallingCode": "_:string*",
+                          "number": "_:string*",
+                          "extension": "_:string*"
+                        }
+                      ],
+                      "emails": [
+                        {
+                          "type": {
+                            "emailType": "_:string*",
+                            "detail": {
+                              "id": "_:string*"
+                            }
+                          },
+                          "preference": "string*",
+                          "address": "string*"
+                        }
+                      ],
+                      "socialMedia": [
+                        {
+                          "type": {
+                            "socialMediaType": "_:string*",
+                            "detail": {
+                              "id": "_:string*"
+                            }
+                          },
+                          "preference": "string*",
+                          "address": "string*"
+                        }
+                      ],
+                      "interests": [
+                        {
+                          "id": "string*"
+                        }
+                      ],
+                      "metadata": {
+                        "createdOn": "_:string*",
+                        "createdBy": "_:string*",
+                        "modifiedOn": "_:string*",
+                        "modifiedBy": "_:string*"
+                      }
+                }
+            },
+            "Students": {
+                "operations": {
+                    "PersonsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/students"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "id",
+                "resources": {
+                    "metadata": {
+                        "createdBy": "_:string*",
+                        "createdOn": "_:string*",
+                        "modifiedBy": "_:string*",
+                        "modifiedOn": "_:string*"
+                      },
+                      "id": "string*",
+                      "person": {
+                        "id": "_:string*"
+                      },
+                      "types": [
+                        {
+                          "type": {
+                            "id": "_:string*"
+                          },
+                          "startOn": "_:string*",
+                          "administrativePeriod": {
+                            "id": "_:string*"
+                          }
+                        }
+                      ],
+                      "residencies": [
+                        {
+                          "residency": {
+                            "id": "_:string*"
+                          },
+                          "startOn": "_:string*",
+                          "administrativePeriod": {
+                            "id": "_:string*"
+                          }
+                        }
+                      ],
+                      "levelClassifications": [
+                        {
+                          "level": {
+                            "id": "_:string*"
+                          },
+                          "latestClassification": {
+                            "id": "_:string*"
+                          }
+                        }
+                      ]
+                }
+            },
+            "Student_Statuses": {
+                "operations": {
+                    "Student_StatusesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/student-statuses"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "id",
+                "resources": {
+                    "metadata": {
+                        "createdBy": "_:string*",
+                        "createdOn": "_:string*",
+                        "modifiedBy": "_:string*",
+                        "modifiedOn": "_:string*"
+                      },
+                    "id": "string*",
+                    "title": "string*",
+                    "description": "string*",
+                    "code": "string*"
+                }
+            },
+            "Student_Types": {
+                "operations": {
+                    "Student_TypesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/student-types"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "id",
+                "resources": {
+                    "metadata": {
+                        "createdBy": "_:string*",
+                        "createdOn": "_:string*",
+                        "modifiedBy": "_:string*",
+                        "modifiedOn": "_:string*"
+                      },
+                    "id": "string*",
+                    "title": "string*",
+                    "description": "string*",
+                    "code": "string*"
+                }
+            }
+        }
+    },
+    "rest": {
+        "config": {
+            "baseUrl": "https://integrate.elluciancloud.com",
+            "get": {
+                "query_parameters": {
+                }
+            },
+            "authentication": "aeries",
+            "call_handling": "generic",
+            "test_connection": {
+                "url": "/api/persons?offset=0&limit=1"
+            },
+            "headers": {
+                "Authorization": "Bearer {client_secret}"
+            }
+        }
+    },
+    "connection": {
+        "items": [
+        ]
+    }
+}
