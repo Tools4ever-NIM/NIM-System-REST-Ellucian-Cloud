@@ -1,4 +1,4 @@
-# Elucian Cloud
+# Ellucian Cloud
 <img src="https://github.com/Tools4ever-NIM/NIM-System-REST-Elucian-Cloud/assets/24281600/a7a99f2e-bd49-41c0-a778-1f201099dbaf" width="256px" />
 
 ## Data Tables
