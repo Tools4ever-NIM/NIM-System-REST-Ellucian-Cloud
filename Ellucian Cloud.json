@@ -2,9 +2,10 @@
     "schema": {
         "options": {},
         "crud_objects": {
+           
             "Academic_Catalogs": {
                 "operations": {
-                    "PersonsList": {
+                    "Academic_CatalogsList": {
                         "method": "get",
                         "call": {
                             "path": "/api/academic-catalogs"
@@ -41,9 +42,123 @@
                       ]
                 }
             },
+            "Academic_Credentials": {
+                "operations": {
+                    "Academic_CredentialsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/academic-credentials"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "id",
+                "resources": {
+                    "abbreviation": "string*",
+                    "id": "string*",
+                    "title": "string*",
+                    "code": "string*"
+                }
+            },
+            "Academic_Levels": {
+                "operations": {
+                    "Academic_LevelsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/academic-levels"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "id",
+                "resources": {
+                      "id": "string*",
+                      "title": "string*",
+                      "code": "string*"
+                }
+            },
+            "Academic_Periods": {
+                "operations": {
+                    "Academic_PeriodsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/academic-periods"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "id",
+                "resources": {
+                      "category": {
+                            "parent": {
+                                "academicPeriod": {
+                                    "id": "_:string*"
+                                },
+                                "id": "_:string*"
+                            },
+                            "sectionDateOverride": "_:string*",
+                            "type": "_:string*"
+                        },
+                        "censusDates": "string*",
+                        "code": "string*",
+                        "endOn": "string*",
+                        "id": "string*",
+                        "registration": "string*",
+                        "startOn": "string*",
+                        "title": "string"
+                }
+            },
+            "Academic_Programs": {
+                "operations": {
+                    "Academic_ProgramsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/academic-programs"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "id",
+                "resources": {
+                    "academicLevel": {
+                        "id": "_:string*"
+                    },
+                    "code": "string*",
+                    "credentials": [
+                        {
+                            "id": "string*"
+                        }
+                    ],
+                    "id": "string*",
+                    "programOwners": [
+                        {
+                            "id": "string*"
+                        }
+                    ],
+                    "startOn": "string*",
+                    "status": "string*",
+                    "title": "string*"
+                }
+            },
             "Email_Types": {
                 "operations": {
-                    "PersonsList": {
+                    "Email_TypesList": {
                         "method": "get",
                         "call": {
                             "path": "/api/email-types"
@@ -68,6 +183,28 @@
                       "description": "string*",
                       "code": "string*",
                       "emailType": "string*"
+                }
+            },
+            "Enrollment_Statuses": {
+                "operations": {
+                    "Enrollment_StatusesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/enrollment-statuses"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "id",
+                "resources": {
+                      "id": "string*",
+                      "title": "string*",
+                      "status": "string*",
+                      "code": "string*"
                 }
             },
             "Persons": {
@@ -198,12 +335,12 @@
                             "expiresOn": "string*"
                         }
                     ],
-                    "credentials": {
-                        "type": "_:string*",
-                        "value": "_:string*",
-                        "startOn": "_:string*",
-                        "endOn": "_:string*"
-                    },
+                    "credentials": [{
+                        "type": "string*",
+                        "value": "string*",
+                        "startOn": "string*",
+                        "endOn": "string*"
+                    }],
                     "alternativeCredentials": {
                         "type": "_:string*",
                         "value": "_:string*"
@@ -309,9 +446,30 @@
                       }
                 }
             },
+            "Person_Filters": {
+                "operations": {
+                    "Email_TypesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/person-filters"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "id",
+                "resources": {
+                      "id": "string*",
+                      "title": "string*",
+                      "code": "string*"
+                }
+            },
             "Students": {
                 "operations": {
-                    "PersonsList": {
+                    "StudentsList": {
                         "method": "get",
                         "call": {
                             "path": "/api/students"
@@ -361,6 +519,69 @@
                           }
                         }
                       ]
+                }
+            },
+            "Student_Academic_Programs": {
+                "operations": {
+                    "Student_Academic_ProgramsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/student-academic-programs"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "query_parameters": {}
+                    }
+                },
+                "parameters": {},
+                "key": "id",
+                "resources": {
+                    "academicLevel": {
+                        "id": "_:string*"
+                    },
+                    "academicPeriods": {
+                        "starting": {
+                            "id": "_:string*"
+                        }
+                    },
+                    "catalog": {
+                        "id": "_:string*"
+                    },
+                    "credentials`": {
+                        "id": "_:string*"
+                    },
+                    "curriculumObject": "string*",
+                    "diciplines": [{
+                        "discipline": {
+                            "id": "_string*"
+                        },
+                        "startOn": "string*",
+                        "status": {
+                            "id": "_:string*"
+                        }
+                    }],
+                    "enrollmentStatus": {
+                        "detail": {
+                            "id": "_:string*"
+                        },
+                        "status": "_:string"
+                    },
+                    "id": "string*",
+                    "preference": "string*",
+                    "program": {
+                        "id": "_:string*"
+                    },
+                    "programOwner": {
+                        "id": "_:string*"
+                    },
+                    "site": {
+                        "id": "_:string*"
+                    },
+                    "startOn": "string*",
+                    "student": {
+                        "id": "_:string*"
+                    }
                 }
             },
             "Student_Statuses": {
