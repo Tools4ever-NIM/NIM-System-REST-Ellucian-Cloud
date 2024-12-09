@@ -233,12 +233,7 @@
                                         "correctionDigit": "_:string*"
                                     },
                                     "latitude": "string*",
-                                    "longitude": "string*",
-                                    "geographicAreas": [
-                                        {
-                                            "id": "string*"
-                                        }
-                                    ]
+                                    "longitude": "string*"
                                 }
 
                             },
@@ -330,12 +325,6 @@
                 "parameters": {},
                 "key": "id",
                 "resources": {
-                    "metadata": {
-                        "createdBy": "_:string*",
-                        "createdOn": "_:string*",
-                        "modifiedBy": "_:string*",
-                        "modifiedOn": "_:string*"
-                      },
                       "id": "string*",
                       "person": {
                         "id": "_:string*"
@@ -345,7 +334,7 @@
                           "type": {
                             "id": "_:string*"
                           },
-                          "startOn": "_:string*",
+                          "startOn": "string*",
                           "administrativePeriod": {
                             "id": "_:string*"
                           }
@@ -356,7 +345,7 @@
                           "residency": {
                             "id": "_:string*"
                           },
-                          "startOn": "_:string*",
+                          "startOn": "string*",
                           "administrativePeriod": {
                             "id": "_:string*"
                           }
