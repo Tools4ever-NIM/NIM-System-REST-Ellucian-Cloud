@@ -680,7 +680,7 @@
                 "name": "page_size",
                 "type": "textbox",
                 "label": "Page Size",
-                "value": "1000"
+                "value": "100"
               }
         ]
     }
