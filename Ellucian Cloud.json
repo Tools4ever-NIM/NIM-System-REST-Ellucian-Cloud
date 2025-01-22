@@ -1,8 +1,6 @@
 {
-    "$schema": ".\\rest-connector.json",
     "schema": {
         "crud_objects": {
-           
             "Academic_Catalogs": {
                 "operations": {
                     "Academic_CatalogsList": {
@@ -569,8 +567,7 @@
 					  }
 					],
 					"id": "string"
-				  }
-                }
+				}
             },
             "Student_Academic_Periods_Statuses": {
                 "operations": {
@@ -591,7 +588,7 @@
 					"title": "string*",
 					"id": "string*"
 				}
-            }
+            },
 			"Student_Academic_Programs": {
                 "operations": {
                     "Student_Academic_ProgramsList": {
@@ -685,7 +682,7 @@
 					},
 					"id": "string*"
 				}
-            }
+            },
 			"Student_Classifications": {
                 "operations": {
                     "Student_ClassificationsList": {
@@ -704,7 +701,7 @@
 					"title": "string*",
 					"id": "string*"
 				}
-            }
+            },
 			"Student_Statuses": {
                 "operations": {
                     "Student_StatusesList": {
