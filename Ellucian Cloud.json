@@ -146,7 +146,27 @@
                     "title": "string*"
                 }
             },
-            "Email_Types": {
+            "Academic_Standing": {
+                "operations": {
+                    "Academic_StandingList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/academic-standings"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        }
+                    }
+                },
+                "key": "id",
+                "resources": {
+                      "id": "string*",
+					  "descrition": "string*",
+                      "title": "string*",
+                      "code": "string*"
+                }
+            },
+			"Email_Types": {
                 "operations": {
                     "Email_TypesList": {
                         "method": "get",
@@ -296,7 +316,7 @@
                     },
                     "countryOfBirth": "string*",
                     "citizenshipCountry": "string*",
-                    "role": [
+                    "roles": [
                         {
                             "role": "_:string*",
                             "startOn": "_:string*",
@@ -501,7 +521,78 @@
                       ]
                 }
             },
-            "Student_Academic_Programs": {
+            "Student_Academic_Periods": {
+                "operations": {
+                    "Student_Academic_PeriodsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/student-academic-periods"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        }
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "person": {
+					  "id": "_:string*"
+					},
+					"academicPeriod": {
+					  "id": "_:string*"
+					},
+					"academicLevels": [
+					  {
+						"academicLevel": {
+						  "id": "_:string*"
+						}
+					  }
+					],
+					"academicStatuses": [
+					  {
+						"basis": "string*",
+						"academicLevel": {
+						  "id": "_:string*"
+						},
+						"academicPeriodStatus": {
+						  "id": "_:string*"
+						}
+					  }
+					],
+					"academicLoads": [
+					  {
+						"basis": "string*",
+						"academicLevel": {
+						  "id": "_:string*"
+						},
+						"academicLoad": "string"
+					  }
+					],
+					"id": "string"
+				  }
+                }
+            },
+            "Student_Academic_Periods_Statuses": {
+                "operations": {
+                    "Student_Academic_Periods_StatusesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/student-academic-period-statuses"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        }
+                    }
+                },
+                "key": "id",
+                "resources": {
+					"usages": "string*",
+					"code": "string*",
+					"title": "string*",
+					"id": "string*"
+				}
+            }
+			"Student_Academic_Programs": {
                 "operations": {
                     "Student_Academic_ProgramsList": {
                         "method": "get",
@@ -562,7 +653,59 @@
                     }
                 }
             },
-            "Student_Statuses": {
+            "Student_Academic_Standings": {
+                "operations": {
+                    "Student_Academic_StandingsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/student-academic-standings"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        }
+                    }
+                },
+                "key": "id",
+                "resources": {
+					"student": {
+						"id": "_:string*"
+					},
+					"type": "string*",
+					"level": {
+						"id": "_:string*"
+					},
+					"academicPeriod": {
+						"id": "_:string*"
+					},
+					"standing": {
+						"id": "_:string*"
+					},
+					"overrideStanding": {
+						"id": "_:string*"
+					},
+					"id": "string*"
+				}
+            }
+			"Student_Classifications": {
+                "operations": {
+                    "Student_ClassificationsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/student-classifications"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        }
+                    }
+                },
+                "key": "id",
+                "resources": {
+					"code": "string*",
+					"title": "string*",
+					"id": "string*"
+				}
+            }
+			"Student_Statuses": {
                 "operations": {
                     "Student_StatusesList": {
                         "method": "get",
