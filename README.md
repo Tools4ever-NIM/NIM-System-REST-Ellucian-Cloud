@@ -4,6 +4,9 @@
 ## Data Tables
 - Academic Catalogs
 - Academic Catalogs academicPrograms
+- Academic Periods
+- Academic Period Statuses
+- Academic Standing
 - Email Types
 - Persons
 - Persons Names
@@ -22,6 +25,7 @@
 - Students Types
 - Students Residences
 - Students LevelClassifications
+- Student Academic Standings
 - Student Statuses
 - Student Types
   
