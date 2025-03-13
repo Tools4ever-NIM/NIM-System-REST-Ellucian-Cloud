@@ -20,22 +20,22 @@
                         "createdOn": "_:string*",
                         "modifiedBy": "_:string*",
                         "modifiedOn": "_:string*"
-                      },
-                      "id": "string*",
-                      "title": "string*",
-                      "description": "string*",
-                      "code": "string*",
-                      "startOn": "string*",
-                      "endOn": "string*",
-                      "status": "string*",
-                      "institution": {
+                    },
+                    "id": "string*",
+                    "title": "string*",
+                    "description": "string*",
+                    "code": "string*",
+                    "startOn": "string*",
+                    "endOn": "string*",
+                    "status": "string*",
+                    "institution": {
                         "id": "_:string*"
-                      },
-                      "academicPrograms": [
+                    },
+                    "academicPrograms": [
                         {
-                          "id": "string*"
+                            "id": "string*"
                         }
-                      ]
+                    ]
                 }
             },
             "Academic_Credentials": {
@@ -72,9 +72,9 @@
                 },
                 "key": "id",
                 "resources": {
-                      "id": "string*",
-                      "title": "string*",
-                      "code": "string*"
+                    "id": "string*",
+                    "title": "string*",
+                    "code": "string*"
                 }
             },
             "Academic_Periods": {
@@ -91,23 +91,23 @@
                 },
                 "key": "id",
                 "resources": {
-                      "category": {
-                            "parent": {
-                                "academicPeriod": {
-                                    "id": "_:string*"
-                                },
+                    "category": {
+                        "parent": {
+                            "academicPeriod": {
                                 "id": "_:string*"
                             },
-                            "sectionDateOverride": "_:string*",
-                            "type": "_:string*"
+                            "id": "_:string*"
                         },
-                        "censusDates": "string*",
-                        "code": "string*",
-                        "endOn": "string*",
-                        "id": "string*",
-                        "registration": "string*",
-                        "startOn": "string*",
-                        "title": "string"
+                        "sectionDateOverride": "_:string*",
+                        "type": "_:string*"
+                    },
+                    "censusDates": "string*",
+                    "code": "string*",
+                    "endOn": "string*",
+                    "id": "string*",
+                    "registration": "string*",
+                    "startOn": "string*",
+                    "title": "string"
                 }
             },
             "Academic_Programs": {
@@ -144,27 +144,7 @@
                     "title": "string*"
                 }
             },
-            "Academic_Standing": {
-                "operations": {
-                    "Academic_StandingList": {
-                        "method": "get",
-                        "call": {
-                            "path": "/api/academic-standings"
-                        },
-                        "processing_options": {
-                            "output_field": null
-                        }
-                    }
-                },
-                "key": "id",
-                "resources": {
-                      "id": "string*",
-					  "descrition": "string*",
-                      "title": "string*",
-                      "code": "string*"
-                }
-            },
-			"Email_Types": {
+            "Email_Types": {
                 "operations": {
                     "Email_TypesList": {
                         "method": "get",
@@ -183,12 +163,12 @@
                         "createdOn": "_:string*",
                         "modifiedBy": "_:string*",
                         "modifiedOn": "_:string*"
-                      },
-                      "id": "string*",
-                      "title": "string*",
-                      "description": "string*",
-                      "code": "string*",
-                      "emailType": "string*"
+                    },
+                    "id": "string*",
+                    "title": "string*",
+                    "description": "string*",
+                    "code": "string*",
+                    "emailType": "string*"
                 }
             },
             "Enrollment_Statuses": {
@@ -205,10 +185,10 @@
                 },
                 "key": "id",
                 "resources": {
-                      "id": "string*",
-                      "title": "string*",
-                      "status": "string*",
-                      "code": "string*"
+                    "id": "string*",
+                    "title": "string*",
+                    "status": "string*",
+                    "code": "string*"
                 }
             },
             "Persons": {
@@ -237,7 +217,7 @@
                             "type": {
                                 "category": "_:string*",
                                 "detail": {
-                                  "id": "_:string*"
+                                    "id": "_:string*"
                                 }
                             },
                             "fullName": "string*",
@@ -255,16 +235,16 @@
                     "dateDeceased": "string*",
                     "gender": "string*",
                     "genderMarker": {
-                        "id": "_:string*"    
+                        "id": "_:string*"
                     },
                     "genderIdentity": {
-                        "id": "_:string*"    
+                        "id": "_:string*"
                     },
                     "religion": {
-                        "id": "_:string*"    
+                        "id": "_:string*"
                     },
                     "personalPronoun": {
-                        "id": "_:string*"    
+                        "id": "_:string*"
                     },
                     "ethnicity": {
                         "ethnicGroup": {
@@ -280,7 +260,7 @@
                     "races": [
                         {
                             "race": {
-                                "id":"_:string*"
+                                "id": "_:string*"
                             },
                             "country": {
                                 "code": "_:string*",
@@ -314,7 +294,7 @@
                     },
                     "countryOfBirth": "string*",
                     "citizenshipCountry": "string*",
-                    "roles": [
+                    "role": [
                         {
                             "role": "_:string*",
                             "startOn": "_:string*",
@@ -337,12 +317,14 @@
                             "expiresOn": "string*"
                         }
                     ],
-                    "credentials": [{
-                        "type": "string*",
-                        "value": "string*",
-                        "startOn": "string*",
-                        "endOn": "string*"
-                    }],
+                    "credentials": [
+                        {
+                            "type": "string*",
+                            "value": "string*",
+                            "startOn": "string*",
+                            "endOn": "string*"
+                        }
+                    ],
                     "alternativeCredentials": {
                         "type": "_:string*",
                         "value": "_:string*"
@@ -351,7 +333,9 @@
                         {
                             "address": {
                                 "id": "_:string*",
-                                "addressLines": ["_:string*"],
+                                "addressLines": [
+                                    "_:string*"
+                                ],
                                 "place": {
                                     "country": {
                                         "code": "_:string*",
@@ -374,7 +358,6 @@
                                     "latitude": "string*",
                                     "longitude": "string*"
                                 }
-
                             },
                             "type": {
                                 "addressType": "_:string*",
@@ -387,65 +370,65 @@
                             "preference": "string*",
                             "seasonalOccupancies": [
                                 {
-                                  "recurrence": {
-                                    "timePeriod": {
-                                      "startOn": "_:string*",
-                                      "endOn": "_:string*"
-                                    },
-                                    "repeatRule": "_:string*"
-                                  }
+                                    "recurrence": {
+                                        "timePeriod": {
+                                            "startOn": "_:string*",
+                                            "endOn": "_:string*"
+                                        },
+                                        "repeatRule": "_:string*"
+                                    }
                                 }
-                              ]
+                            ]
                         }
                     ],
                     "phones": [
                         {
-                          "type": {
-                            "phoneType": "_:string*",
-                            "detail": {
-                              "id": "_:string*"
-                            }
-                          },
-                          "countryCallingCode": "_:string*",
-                          "number": "_:string*",
-                          "extension": "_:string*"
+                            "type": {
+                                "phoneType": "_:string*",
+                                "detail": {
+                                    "id": "_:string*"
+                                }
+                            },
+                            "countryCallingCode": "_:string*",
+                            "number": "_:string*",
+                            "extension": "_:string*"
                         }
-                      ],
-                      "emails": [
+                    ],
+                    "emails": [
                         {
-                          "type": {
-                            "emailType": "_:string*",
-                            "detail": {
-                              "id": "_:string*"
-                            }
-                          },
-                          "preference": "string*",
-                          "address": "string*"
+                            "type": {
+                                "emailType": "_:string*",
+                                "detail": {
+                                    "id": "_:string*"
+                                }
+                            },
+                            "preference": "string*",
+                            "address": "string*"
                         }
-                      ],
-                      "socialMedia": [
+                    ],
+                    "socialMedia": [
                         {
-                          "type": {
-                            "socialMediaType": "_:string*",
-                            "detail": {
-                              "id": "_:string*"
-                            }
-                          },
-                          "preference": "string*",
-                          "address": "string*"
+                            "type": {
+                                "socialMediaType": "_:string*",
+                                "detail": {
+                                    "id": "_:string*"
+                                }
+                            },
+                            "preference": "string*",
+                            "address": "string*"
                         }
-                      ],
-                      "interests": [
+                    ],
+                    "interests": [
                         {
-                          "id": "string*"
+                            "id": "string*"
                         }
-                      ],
-                      "metadata": {
+                    ],
+                    "metadata": {
                         "createdOn": "_:string*",
                         "createdBy": "_:string*",
                         "modifiedOn": "_:string*",
                         "modifiedBy": "_:string*"
-                      }
+                    }
                 }
             },
             "Person_Filters": {
@@ -462,9 +445,9 @@
                 },
                 "key": "id",
                 "resources": {
-                      "id": "string*",
-                      "title": "string*",
-                      "code": "string*"
+                    "id": "string*",
+                    "title": "string*",
+                    "code": "string*"
                 }
             },
             "Students": {
@@ -481,115 +464,45 @@
                 },
                 "key": "id",
                 "resources": {
-                      "id": "string*",
-                      "person": {
+                    "id": "string*",
+                    "person": {
                         "id": "_:string*"
-                      },
-                      "types": [
+                    },
+                    "types": [
                         {
-                          "type": {
-                            "id": "_:string*"
-                          },
-                          "startOn": "string*",
-                          "administrativePeriod": {
-                            "id": "_:string*"
-                          }
+                            "type": {
+                                "id": "_:string*"
+                            },
+                            "startOn": "string*",
+                            "administrativePeriod": {
+                                "id": "_:string*"
+                            }
                         }
-                      ],
-                      "residencies": [
+                    ],
+                    "residencies": [
                         {
-                          "residency": {
-                            "id": "_:string*"
-                          },
-                          "startOn": "string*",
-                          "administrativePeriod": {
-                            "id": "_:string*"
-                          }
+                            "residency": {
+                                "id": "_:string*"
+                            },
+                            "startOn": "string*",
+                            "administrativePeriod": {
+                                "id": "_:string*"
+                            }
                         }
-                      ],
-                      "levelClassifications": [
+                    ],
+                    "levelClassifications": [
                         {
-                          "level": {
-                            "id": "_:string*"
-                          },
-                          "latestClassification": {
-                            "id": "_:string*"
-                          }
+                            "level": {
+                                "id": "_:string*"
+                            },
+                            "latestClassification": {
+                                "id": "_:string*"
+                            }
                         }
-                      ]
+                    ]
                 }
             },
-            "Student_Academic_Periods": {
-                "operations": {
-                    "Student_Academic_PeriodsList": {
-                        "method": "get",
-                        "call": {
-                            "path": "/api/student-academic-periods"
-                        },
-                        "processing_options": {
-                            "output_field": null
-                        }
-                    }
-                },
-                "key": "id",
-                "resources": {
-                    "person": {
-					  "id": "_:string*"
-					},
-					"academicPeriod": {
-					  "id": "_:string*"
-					},
-					"academicLevels": [
-					  {
-						"academicLevel": {
-						  "id": "_:string*"
-						}
-					  }
-					],
-					"academicStatuses": [
-					  {
-						"basis": "string*",
-						"academicLevel": {
-						  "id": "_:string*"
-						},
-						"academicPeriodStatus": {
-						  "id": "_:string*"
-						}
-					  }
-					],
-					"academicLoads": [
-					  {
-						"basis": "string*",
-						"academicLevel": {
-						  "id": "_:string*"
-						},
-						"academicLoad": "string"
-					  }
-					],
-					"id": "string"
-				}
-            },
-            "Student_Academic_Periods_Statuses": {
-                "operations": {
-                    "Student_Academic_Periods_StatusesList": {
-                        "method": "get",
-                        "call": {
-                            "path": "/api/student-academic-period-statuses"
-                        },
-                        "processing_options": {
-                            "output_field": null
-                        }
-                    }
-                },
-                "key": "id",
-                "resources": {
-					"usages": "string*",
-					"code": "string*",
-					"title": "string*",
-					"id": "string*"
-				}
-            },
-			"Student_Academic_Programs": {
+            "Student_Academic_Programs": {
                 "operations": {
                     "Student_Academic_ProgramsList": {
                         "method": "get",
@@ -618,15 +531,17 @@
                         "id": "_:string*"
                     },
                     "curriculumObject": "string*",
-                    "diciplines": [{
-                        "discipline": {
-                            "id": "_string*"
-                        },
-                        "startOn": "string*",
-                        "status": {
-                            "id": "_:string*"
+                    "diciplines": [
+                        {
+                            "discipline": {
+                                "id": "_string*"
+                            },
+                            "startOn": "string*",
+                            "status": {
+                                "id": "_:string*"
+                            }
                         }
-                    }],
+                    ],
                     "enrollmentStatus": {
                         "detail": {
                             "id": "_:string*"
@@ -650,59 +565,7 @@
                     }
                 }
             },
-            "Student_Academic_Standings": {
-                "operations": {
-                    "Student_Academic_StandingsList": {
-                        "method": "get",
-                        "call": {
-                            "path": "/api/student-academic-standings"
-                        },
-                        "processing_options": {
-                            "output_field": null
-                        }
-                    }
-                },
-                "key": "id",
-                "resources": {
-					"student": {
-						"id": "_:string*"
-					},
-					"type": "string*",
-					"level": {
-						"id": "_:string*"
-					},
-					"academicPeriod": {
-						"id": "_:string*"
-					},
-					"standing": {
-						"id": "_:string*"
-					},
-					"overrideStanding": {
-						"id": "_:string*"
-					},
-					"id": "string*"
-				}
-            },
-			"Student_Classifications": {
-                "operations": {
-                    "Student_ClassificationsList": {
-                        "method": "get",
-                        "call": {
-                            "path": "/api/student-classifications"
-                        },
-                        "processing_options": {
-                            "output_field": null
-                        }
-                    }
-                },
-                "key": "id",
-                "resources": {
-					"code": "string*",
-					"title": "string*",
-					"id": "string*"
-				}
-            },
-			"Student_Statuses": {
+            "Student_Statuses": {
                 "operations": {
                     "Student_StatusesList": {
                         "method": "get",
@@ -721,7 +584,7 @@
                         "createdOn": "_:string*",
                         "modifiedBy": "_:string*",
                         "modifiedOn": "_:string*"
-                      },
+                    },
                     "id": "string*",
                     "title": "string*",
                     "description": "string*",
@@ -747,7 +610,7 @@
                         "createdOn": "_:string*",
                         "modifiedBy": "_:string*",
                         "modifiedOn": "_:string*"
-                      },
+                    },
                     "id": "string*",
                     "title": "string*",
                     "description": "string*",
@@ -764,10 +627,10 @@
                     "mode": "skip_take",
                     "page_size": "{page_size}",
                     "params": {
-                      "limit": "{take_count}",
-                      "offset": "{skip_count}"
+                        "limit": "{take_count}",
+                        "offset": "{skip_count}"
                     }
-                  }
+                }
             },
             "authentication": "custom_post_token",
             "call_handling": "generic",
@@ -776,14 +639,28 @@
             },
             "headers": {
                 "Authorization": "Bearer {client_secret}"
-            }
+            },
+            "retry": [
+                {
+                    "type": "statusCode",
+                    "statusCode": 429,
+                    "retry": {
+                        "type": "simple",
+                        "maxCount": 20,
+                        "waitTime": 10
+                    }
+                },
+                {
+                    "type": "connectionError"
+                }
+            ]
         },
         "authOptions": {
+            "type": "custom_post_token",
             "authUrl": "https://integrate.elluciancloud.com/auth",
-            "postHeaders":  {
+            "postHeaders": {
                 "Authorization": "Bearer {password}"
-            },
-            "type": "custom_post_token"
+            }
         }
     },
     "connection": {
@@ -793,10 +670,10 @@
                 "type": "textbox",
                 "label": "Page Size",
                 "value": "100",
-                "required": true,
+				"required": true,
                 "tooltip": "Size of each response back from the API. Max size is 100",
                 "order": 300
-              }
+            }
         ]
     }
 }
