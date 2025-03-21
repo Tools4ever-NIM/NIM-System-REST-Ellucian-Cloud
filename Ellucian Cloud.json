@@ -171,6 +171,59 @@
                     "emailType": "string*"
                 }
             },
+            "Employees": {
+                "operations": {
+                    "EmployeesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/employees"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        }
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "metadata": {
+                        "createdBy": "string",
+                        "createdOn": "string",
+                        "modifiedBy": "string",
+                        "modifiedOn": "string"
+                    },
+                    "id": "string*",
+                    "person": {
+                        "id": "_:string*"
+                    },
+                    "campus": {
+                        "id": "_:string*"
+                    },
+                    "contractType": "string*",
+                    "payStatus": "string*",
+                    "benefitsStatus": "string*",
+                    "hoursPerPeriod": [
+                        {
+                            "period": "string*",
+                            "hours": "string*"
+                        }
+                    ],
+                    "status": "string*",
+                    "startOn": "string*",
+                    "endOn": "string*",
+                    "terminationReason": {
+                        "id": "_:string*"
+                    },
+                    "rehireableStatus": {
+                        "eligibility": "_:string*",
+                        "type": {
+                            "id": "_:string*"
+                        }
+                    },
+                    "leaveReason": {
+                        "id": "_:string*"
+                    }
+                }
+            },
             "Enrollment_Statuses": {
                 "operations": {
                     "Enrollment_StatusesList": {
@@ -666,12 +719,28 @@
     "connection": {
         "items": [
             {
+                "name": "user_name",
+                "type": "textbox",
+                "label": "Username",
+                "hidden": "true",
+                "required": false,
+                "value": "Not required",
+                "tooltip": "This field is not used"
+            },
+            {
+                "name": "password",
+                "type": "textbox",
+                "label": "API Key",
+                "required": false,
+                "tooltip": "Provide the API Secret to authorize the request"
+            },
+            {
                 "name": "page_size",
                 "type": "textbox",
                 "label": "Page Size",
-                "value": "100",
-				"required": true,
-                "tooltip": "Size of each response back from the API. Max size is 100",
+                "value": "1000",
+                "required": true,
+                "tooltip": "Size of each response back from the API. Max size is 1000",
                 "order": 300
             }
         ]
