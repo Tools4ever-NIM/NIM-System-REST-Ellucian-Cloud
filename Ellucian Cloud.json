@@ -171,6 +171,317 @@
                     "emailType": "string*"
                 }
             },
+            "Employees": {
+                "operations": {
+                    "EmployeesList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/employees",
+                            "queryParameters": {
+                                "criteria": "{\"status\":\"active\"}"
+
+                            }
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        }
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "metadata": {
+                        "createdBy": "string",
+                        "createdOn": "string",
+                        "modifiedBy": "string",
+                        "modifiedOn": "string"
+                    },
+                    "id": "string*",
+                    "person": {
+                        "id": "_:string*"
+                    },
+                    "campus": {
+                        "id": "_:string*"
+                    },
+                    "contractType": "string*",
+                    "payStatus": "string*",
+                    "benefitsStatus": "string*",
+                    "hoursPerPeriod": [
+                        {
+                            "period": "string*",
+                            "hours": "string*"
+                        }
+                    ],
+                    "status": "string*",
+                    "startOn": "string*",
+                    "endOn": "string*",
+                    "terminationReason": {
+                        "id": "_:string*"
+                    },
+                    "rehireableStatus": {
+                        "eligibility": "_:string*",
+                        "type": {
+                            "id": "_:string*"
+                        }
+                    },
+                    "leaveReason": {
+                        "id": "_:string*"
+                    }
+                }
+            },
+            "Employees_All": {
+                "operations": {
+                    "EmployeesAllList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/employees"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        }
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "metadata": {
+                        "createdBy": "string",
+                        "createdOn": "string",
+                        "modifiedBy": "string",
+                        "modifiedOn": "string"
+                    },
+                    "id": "string*",
+                    "person": {
+                        "id": "_:string*"
+                    },
+                    "campus": {
+                        "id": "_:string*"
+                    },
+                    "contractType": "string*",
+                    "payStatus": "string*",
+                    "benefitsStatus": "string*",
+                    "hoursPerPeriod": [
+                        {
+                            "period": "string*",
+                            "hours": "string*"
+                        }
+                    ],
+                    "status": "string*",
+                    "startOn": "string*",
+                    "endOn": "string*",
+                    "terminationReason": {
+                        "id": "_:string*"
+                    },
+                    "rehireableStatus": {
+                        "eligibility": "_:string*",
+                        "type": {
+                            "id": "_:string*"
+                        }
+                    },
+                    "leaveReason": {
+                        "id": "_:string*"
+                    }
+                }
+            },
+            "Employee_Jobs": {
+                "operations": {
+                    "Employee_JobsList": {
+                        "method": "get",
+                        "pagination": "none",
+                        "call": {
+                            "mode": "iteration",
+                            "table": "Employees",
+                            "iterator": "person_id",
+                            "path": "/api/employee-jobs",
+                            "queryParameters": {
+                                "criteria": "{ \"personId\": \"{iterator}\"}"
+                            }
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 20
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "bannerId": "string*",
+                    "endOn": "string*",
+                    "id": "string*",
+                    "person": {
+                        "id": "_:string*"
+                    },
+                    "position": "string*",
+                    "startOn": "string*",
+                    "suffix": "string*"
+                }
+            },
+            "Employee_Job_Details": {
+                "operations": {
+                    "EmployeesJobDetailsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/employee-job-details",
+                            "queryParameters": {
+                                "criteria": "{\"jobStatus\":\"active\"}"
+
+                            }
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        }
+                    }
+                },
+                "key": "id",
+                "resources": {
+                     "id": "string*",
+							"bannerId": "string*",
+							"position": "string*",
+							"suffix": "string*",
+							"effectiveOn": "string*",
+							"contractNumber": "string*",
+							"deferPayScheduleCode": "string*",
+							"description": "string*",
+							"eeoLocationCode": "string*",
+							"eeoSchoolCode": "string*",
+							"employeeClassCode": "string*",
+							"employerCode": "string*",
+							"jobChangeReasonCode": "string*",
+							"jobLocationCode": "string*",
+							"leaveCategoryCode": "string*",
+							"leaveReportMethod": "string*",
+							"leaveReportPayrollCode": "string*",
+							"jobStatus": "string*",
+							"salaryGrade": "string*",
+							"salaryGroup": "string*",
+							"salaryTable": "string*",
+							"shift": "string*",
+							"supervisorBannerId": "string*",
+							"supervisorPosition": "string*",
+							"supervisorSuffix": "string*",
+							"timeEntryMethod": "string*",
+							"timeEntryType": "string*",
+							"employeeJob": {
+								"id": "_:string*",
+								"contractType": "_:string*"
+							},
+							"person": {
+								"id": "_:string*"
+							}
+                }
+            },
+            "Employee_Employments": {
+                "operations": {
+                    "Employee_EmploymentList": {
+                        "method": "get",
+                        "pagination": "none",
+                        "call": {
+                            "mode": "iteration",
+                            "table": "Employees",
+                            "iterator": "person_id",
+                            "path": "/api/employee-employments",
+                            "queryParameters": {
+                                "criteria": "{ \"personId\": \"{iterator}\"}"
+                            }
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 20
+                    }
+                },
+                "key": "id",
+                "resources": {
+                     "id": "string*",
+							"bannerId": "string*",
+							"adjustedServiceOn": "string*",
+							"benefitCategoryCode": "string*",
+							"californiaPensionMemberStatus": "string*",
+							"campusCode": "string*",
+							"canadianNonResidentServiceIndustry": "string*",
+							"collegeCode": "string*",
+							"currentHireOn": "string*",
+							"distributionCoasCode": "string*",
+							"distributionOrganizationCode": "string*",
+							"districtDivisionCode": "string*",
+							"eeoFullTimePartTime": "string*",
+							"employeeClassCode": "string*",
+							"employeeGroup": "string*",
+							"employmentStatus": "string*",
+							"firstHiredOn": "string*",
+							"firstWorkedOn": "string*",
+							"jobLocationCode": "string*",
+							"lastWorkedOn": "string*",
+							"leaveCategoryCode": "string*",
+							"leaveOfAbsenceBeginOn": "string*",
+							"leaveOfAbsenceEndOn": "string*",
+							"leaveReasonCode": "string*",
+							"isEligibleForNewHireEnrollment": "string*",
+							"persAppointmentId": "string*",
+							"ssnFirstName": "string*",
+							"ssnLastName": "string*",
+							"ssnMiddleInitial": "string*",
+							"ssnSuffix": "string*",
+							"terminationOn": "string*",
+							"terminationReasonCode": "string*",
+							"workPeriodCode": "string*",
+							"person": {
+								"id": "_:string*"
+							}
+                }
+            },
+            "Organizations": {
+                "operations": {
+                    "OrganizationsList": {
+                        "method": "get",
+                        "pagination": "none",
+                        "call": {
+                            "path": "/api/organizations"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 20
+                    }
+                },
+                "key": "id",
+                "resources": {
+                        "id": "string*",
+                        "title": "string*",
+                        "description": "string*",
+                        "roles": [
+                          {
+                            "role": "_:string*",
+                            "startOn": "_:string*",
+                            "endOn": "_:string*"
+                          }
+                        ],
+                        "phones": [
+                          {
+                            "type": {
+                              "phoneType": "string*",
+                              "detail": {
+                                "id": "_string*"
+                              }
+                            },
+                            "preference": "string*",
+                            "countryCallingCode": "string*",
+                            "number": "string*",
+                            "extension": "string*"
+                          }
+                        ],
+                        "emails": [
+                          {
+                            "type": {
+                              "emailType": "_:string*",
+                              "detail": {
+                                "id": "_:string*"
+                              }
+                            },
+                            "preference": "_:string*",
+                            "address": "_:string*"
+                          }
+                        ]
+                }
+            },
             "Enrollment_Statuses": {
                 "operations": {
                     "Enrollment_StatusesList": {
@@ -666,12 +977,28 @@
     "connection": {
         "items": [
             {
+                "name": "user_name",
+                "type": "textbox",
+                "label": "Username",
+                "hidden": "true",
+                "required": false,
+                "value": "Not required",
+                "tooltip": "This field is not used"
+            },
+            {
+                "name": "password",
+                "type": "textbox",
+                "label": "API Key",
+                "required": false,
+                "tooltip": "Provide the API Secret to authorize the request"
+            },
+            {
                 "name": "page_size",
                 "type": "textbox",
                 "label": "Page Size",
-                "value": "100",
-				"required": true,
-                "tooltip": "Size of each response back from the API. Max size is 100",
+                "value": "1000",
+                "required": true,
+                "tooltip": "Size of each response back from the API. Max size is 1000",
                 "order": 300
             }
         ]
