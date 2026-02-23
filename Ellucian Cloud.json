@@ -944,6 +944,7 @@
                 }
             },
             "authentication": "custom_post_token",
+            "accept": "application/json",
             "call_handling": "generic",
             "test_connection": {
                 "url": "/api/persons?offset=0&limit=1"
