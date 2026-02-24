@@ -96,6 +96,7 @@
                             "academicPeriod": {
                                 "id": "_:string*"
                             },
+                            "academicYear": "_:string*",
                             "id": "_:string*"
                         },
                         "sectionDateOverride": "_:string*",
@@ -107,7 +108,7 @@
                     "id": "string*",
                     "registration": "string*",
                     "startOn": "string*",
-                    "title": "string"
+                    "title": "string*"
                 }
             },
             "Academic_Programs": {
@@ -179,7 +180,6 @@
                             "path": "/api/employees",
                             "queryParameters": {
                                 "criteria": "{\"status\":\"active\"}"
-
                             }
                         },
                         "processing_options": {
@@ -211,6 +211,9 @@
                             "hours": "string*"
                         }
                     ],
+                    "homeOrganization": {
+                        "id": "_:string*"
+                    },
                     "status": "string*",
                     "startOn": "string*",
                     "endOn": "string*",
@@ -311,7 +314,8 @@
                     },
                     "position": "string*",
                     "startOn": "string*",
-                    "suffix": "string*"
+                    "suffix": "string*",
+                    "contractType": "string*"
                 }
             },
             "Employee_Job_Details": {
@@ -322,7 +326,6 @@
                             "path": "/api/employee-job-details",
                             "queryParameters": {
                                 "criteria": "{\"jobStatus\":\"active\"}"
-
                             }
                         },
                         "processing_options": {
@@ -482,6 +485,142 @@
                         ]
                 }
             },
+            "Institution_Jobs": {
+                "operations": {
+                    "Institution_JobsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/institution-jobs"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 20
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "id": "string*",
+                    "person": {
+                        "id": "_:string*"
+                    },
+                        "employer": {
+                    "id": "_:string*"
+                    },
+                    "position": {
+                    "id": "_:string*"
+                    },
+                    "department": {
+                    "id": "_:string*"
+                    },
+                    "startOn": "string*",
+                    "originatedOn": "string*",
+                    "endOn": "string*",
+                    "jobChangeReason": {
+                    "id": "_:string*"
+                    },
+                    "status": "string*",
+                    "supervisors": [
+                    {
+                        "supervisor": {
+                        "id": "_:string*"
+                        },
+                        "type": "_:string*"
+                    }
+                    ],
+                    "classification": {
+                    "id": "_:string*"
+                    },
+                    "preference": "string*",
+                    "suffix": "string*"
+                }
+                
+            },
+			"Institution_Positions": {
+                "operations": {
+                    "Institution_PositionsList": {
+                        "method": "get",
+                        "call": {
+                            "path": "/api/institution-positions"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 20
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "id": "string*",
+					"title": "string*",
+					"description": "string*",
+					"code": "string*",
+					"campus": {
+					  "id": "_:string*"
+					},
+					"departments": [
+					  {
+						"id": "_:string*"
+					  }
+					],
+					"status": "string*",
+					"startOn": "string*",
+					"endOn": "string*",
+					"authorizedOn": "string*"
+				}
+            },
+            "Positions": {
+                "operations": {
+                    "PositionsList": {
+                        "method": "get",
+                        "pagination": "none",
+                        "call": {
+                            "path": "/api/positions"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 20
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "id": "string*",
+                    "title": "string*",
+                    "shortTitle": "string*",
+                    "supervisorPositionId": "string*",
+                    "alternateSupervisorPositionId": "string*",
+                    "timecardType": "string*",
+                    "startDate": "string*",
+                    "endDate": "string*",
+                    "positionDept": "string*",
+                    "positionLocation": "string*"
+                }
+            },
+            "Employment_Departments": {
+                "operations": {
+                    "Employment_DepartmentsList": {
+                        "method": "get",
+                        "pagination": "none",
+                        "call": {
+                            "path": "/api/employment-departments"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 20
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "id": "string*",
+                    "title": "string*",
+                    "description": "string*",
+                    "code": "string*",
+                    "status": "string*",
+                    "endOn": "string*"
+                }
+            },
             "Enrollment_Statuses": {
                 "operations": {
                     "Enrollment_StatusesList": {
@@ -605,11 +744,11 @@
                     },
                     "countryOfBirth": "string*",
                     "citizenshipCountry": "string*",
-                    "role": [
+                    "roles": [
                         {
+							"endOn": "_:string*",
                             "role": "_:string*",
-                            "startOn": "_:string*",
-                            "endOn": "_:string*"
+                            "startOn": "_:string*"
                         }
                     ],
                     "identityDocuments": [
@@ -981,10 +1120,11 @@
                 "name": "user_name",
                 "type": "textbox",
                 "label": "Username",
-                "hidden": "true",
+                "hidden": "page_size",
                 "required": false,
                 "value": "Not required",
-                "tooltip": "This field is not used"
+                "tooltip": "This field is not used",
+                "disabled": "page_size"
             },
             {
                 "name": "password",
