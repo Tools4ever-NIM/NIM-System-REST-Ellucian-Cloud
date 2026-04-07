@@ -5,6 +5,7 @@
                 "operations": {
                     "Academic_CatalogsList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/academic-catalogs"
                         },
@@ -42,6 +43,7 @@
                 "operations": {
                     "Academic_CredentialsList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/academic-credentials"
                         },
@@ -62,6 +64,7 @@
                 "operations": {
                     "Academic_LevelsList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/academic-levels"
                         },
@@ -81,6 +84,7 @@
                 "operations": {
                     "Academic_PeriodsList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/academic-periods"
                         },
@@ -115,6 +119,7 @@
                 "operations": {
                     "Academic_ProgramsList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/academic-programs"
                         },
@@ -149,6 +154,7 @@
                 "operations": {
                     "Email_TypesList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/email-types"
                         },
@@ -176,6 +182,7 @@
                 "operations": {
                     "EmployeesList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/employees",
                             "queryParameters": {
@@ -235,6 +242,7 @@
                 "operations": {
                     "EmployeesAllList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/employees"
                         },
@@ -289,6 +297,7 @@
                     "Employee_JobsList": {
                         "method": "get",
                         "pagination": "none",
+                        "disableCompression": true,
                         "call": {
                             "mode": "iteration",
                             "table": "Employees",
@@ -322,6 +331,7 @@
                 "operations": {
                     "EmployeesJobDetailsList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/employee-job-details",
                             "queryParameters": {
@@ -376,6 +386,7 @@
                     "Employee_EmploymentList": {
                         "method": "get",
                         "pagination": "none",
+                        "disableCompression": true,
                         "call": {
                             "mode": "iteration",
                             "table": "Employees",
@@ -436,6 +447,7 @@
                     "OrganizationsList": {
                         "method": "get",
                         "pagination": "none",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/organizations"
                         },
@@ -489,6 +501,7 @@
                 "operations": {
                     "Institution_JobsList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/institution-jobs"
                         },
@@ -540,6 +553,7 @@
                 "operations": {
                     "Institution_PositionsList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/institution-positions"
                         },
@@ -574,6 +588,7 @@
                     "PositionsList": {
                         "method": "get",
                         "pagination": "none",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/positions"
                         },
@@ -602,6 +617,7 @@
                     "Employment_DepartmentsList": {
                         "method": "get",
                         "pagination": "none",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/employment-departments"
                         },
@@ -625,6 +641,7 @@
                 "operations": {
                     "Enrollment_StatusesList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/enrollment-statuses"
                         },
@@ -645,6 +662,7 @@
                 "operations": {
                     "PersonsList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/persons"
                         },
@@ -885,6 +903,7 @@
                 "operations": {
                     "Email_TypesList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/person-filters"
                         },
@@ -904,6 +923,7 @@
                 "operations": {
                     "StudentsList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/students"
                         },
@@ -956,6 +976,7 @@
                 "operations": {
                     "Student_Academic_ProgramsList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/student-academic-programs"
                         },
@@ -1019,6 +1040,7 @@
                 "operations": {
                     "Student_StatusesList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/student-statuses"
                         },
@@ -1045,6 +1067,7 @@
                 "operations": {
                     "Student_TypesList": {
                         "method": "get",
+                        "disableCompression": true,
                         "call": {
                             "path": "/api/student-types"
                         },
@@ -1140,7 +1163,7 @@
                 "value": "1000",
                 "required": true,
                 "tooltip": "Size of each response back from the API. Max size is 1000",
-                "order": 300
+                "order": 100
             }
         ]
     }
