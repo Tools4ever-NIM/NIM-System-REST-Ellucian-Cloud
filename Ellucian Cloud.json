@@ -972,6 +972,58 @@
                     ]
                 }
             },
+            "Student_Academic_Period_Statuses": {
+                "operations": {
+                    "Student_Academic_Period_StatusesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/student-academic-period-statuses"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        }
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "id": "string*",
+                    "usages": "string*",
+                    "code": "string*",
+                    "title": "string*"
+                }
+            },
+            "Student_Academic_Periods": {
+                "operations": {
+                    "Student_Academic_PeriodsList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/student-academic-periods"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        }
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "academicLevels": [
+                        {
+                            "academicLevel": {
+                                "id": "_:string*"
+                            }
+                        }
+                    ],
+                    "academicPeriod": {
+                            "id": "_:string*"
+                    },
+                    "id": "string*",
+                    "person": {
+                        "id": "_:string*"
+                    }
+                }
+            },
             "Student_Academic_Programs": {
                 "operations": {
                     "Student_Academic_ProgramsList": {
