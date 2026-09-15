@@ -668,7 +668,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 20
                     }
                 },
                 "key": "id",
@@ -1154,7 +1155,8 @@
                     "params": {
                         "limit": "{take_count}",
                         "offset": "{skip_count}"
-                    }
+                    },
+                    "total_count_header": "x-total-count"
                 }
             },
             "authentication": "custom_post_token",
