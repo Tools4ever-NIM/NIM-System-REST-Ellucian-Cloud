@@ -1,6 +1,26 @@
 {
     "schema": {
         "crud_objects": {
+            "About": {
+                "operations": {
+                    "AboutList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/about"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "name",
+                "resources": {
+                    "name": "string*",
+                    "version": "string*"
+                }
+            },
             "Academic_Catalogs": {
                 "operations": {
                     "Academic_CatalogsList": {
@@ -11,7 +31,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -49,7 +70,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -58,6 +80,49 @@
                     "id": "string*",
                     "title": "string*",
                     "code": "string*"
+                }
+            },
+            "Academic_Credit_Status_Reasons": {
+                "operations": {
+                    "Academic_Credit_Status_ReasonsList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/academic-credit-status-reasons"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "Academic_Disciplines": {
+                "operations": {
+                    "Academic_DisciplinesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/academic-disciplines"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "type": "string*",
+                    "abbreviation": "string*",
+                    "title": "string*",
+                    "id": "string*"
                 }
             },
             "Academic_Levels": {
@@ -70,7 +135,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -78,6 +144,28 @@
                     "id": "string*",
                     "title": "string*",
                     "code": "string*"
+                }
+            },
+            "Academic_Period_Enrollment_Statuses": {
+                "operations": {
+                    "Academic_Period_Enrollment_StatusesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/academic-period-enrollment-statuses"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "code": "string*",
+                    "title": "string*",
+                    "description": "string*",
+                    "id": "string*"
                 }
             },
             "Academic_Periods": {
@@ -90,7 +178,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -125,7 +214,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -150,6 +240,335 @@
                     "title": "string*"
                 }
             },
+            "Address_Types": {
+                "operations": {
+                    "Address_TypesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/address-types"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "addressType": "string*",
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "Buildings": {
+                "operations": {
+                    "BuildingsList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/buildings"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "address": {
+                        "addressLines": [
+                            "_:string*"
+                        ],
+                        "place": {
+                            "country": {
+                                "code": "_:string*",
+                                "title": "_:string*",
+                                "postalTitle": "_:string*",
+                                "region": {
+                                    "code": "_:string*",
+                                    "title": "_:string*"
+                                },
+                                "locality": "_:string*",
+                                "postalCode": "_:string*"
+                            }
+                        }
+                    },
+                    "site": {
+                        "id": "_:string*"
+                    },
+                    "code": "string*",
+                    "title": "string*",
+                    "description": "string*",
+                    "id": "string*"
+                }
+            },
+            "Building_Wings": {
+                "operations": {
+                    "Building_WingsList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/building-wings"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "Courses": {
+                "operations": {
+                    "CoursesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/courses"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "titles": [
+                        {
+                            "type": {
+                                "id": "_:string*"
+                            },
+                            "value": "string*"
+                        }
+                    ],
+                    "description": "string*",
+                    "subject": {
+                        "id": "_:string*"
+                    },
+                    "topic": {
+                        "id": "_:string*"
+                    },
+                    "categories": [
+                        {
+                            "id": "string*"
+                        }
+                    ],
+                    "courseLevels": [
+                        {
+                            "id": "string*"
+                        }
+                    ],
+                    "instructionalMethodDetails": [
+                        {
+                            "instructionalMethod": {
+                                "id": "_:string*"
+                            }
+                        }
+                    ],
+                    "hours": [
+                        {
+                            "administrativeInstructionalMethod": {
+                                "id": "_:string*"
+                            },
+                            "minimum": "_:number*"
+                        }
+                    ],
+                    "owningInstitutionUnits": [
+                        {
+                            "institutionUnit": {
+                                "id": "_:string*"
+                            },
+                            "ownershipPercentage": "number*"
+                        }
+                    ],
+                    "schedulingStartOn": "string*",
+                    "number": "string*",
+                    "academicLevels": [
+                        {
+                            "id": "string*"
+                        }
+                    ],
+                    "credits": [
+                        {
+                            "creditCategory": {
+                                "creditType": "_:string*",
+                                "detail": {
+                                    "id": "_:string*"
+                                }
+                            },
+                            "measure": "string*",
+                            "minimum": "_:number*"
+                        }
+                    ],
+                    "status": {
+                        "id": "_:string*"
+                    },
+                    "metadata": {
+                        "createdBy": "_:string*"
+                    },
+                    "id": "string*"
+                }
+            },
+            "Course_Categories": {
+                "operations": {
+                    "Course_CategoriesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/course-categories"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "Course_Levels": {
+                "operations": {
+                    "Course_LevelsList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/course-levels"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "Course_Statuses": {
+                "operations": {
+                    "Course_StatusesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/course-statuses"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "category": "string*",
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "Course_Transfer_Statuses": {
+                "operations": {
+                    "Course_Transfer_StatusesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/course-transfer-statuses"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "category": "string*",
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "Course_Title_Types": {
+                "operations": {
+                    "Course_Title_TypesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/course-title-types"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "code": "string*",
+                    "title": "string*",
+                    "description": "string*",
+                    "id": "string*"
+                }
+            },
+            "Course_Topics": {
+                "operations": {
+                    "Course_TopicsList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/course-topics"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "Countries": {
+                "operations": {
+                    "CountriesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/countries"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "title": "string*",
+                    "code": "string*",
+                    "isoCode": "string*",
+                    "id": "string*"
+                }
+            },
             "Email_Types": {
                 "operations": {
                     "Email_TypesList": {
@@ -160,7 +579,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -191,7 +611,9 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "warning_only": [400],
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -248,7 +670,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -310,7 +733,7 @@
                         "processing_options": {
                             "output_field": null
                         },
-                        "maxSessionCount": 20
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -340,7 +763,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -399,7 +823,7 @@
                         "processing_options": {
                             "output_field": null
                         },
-                        "maxSessionCount": 20
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -442,6 +866,41 @@
 							}
                 }
             },
+            "Organizational_Roles": {
+                "operations": {
+                    "Organizational_RolesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/organizational-roles"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "id": "string*",
+                    "title": "string*",
+                    "startDate": "string*",
+                    "type": "string*",
+                    "purpose": "string*",
+                    "hierarchy": "string*",
+                    "department": "string*",
+                    "location": "string*",
+                    "position": "string*",
+                    "comments": "string*",
+                    "permissions": [
+                        {
+                            "id": "string*",
+                            "code": "string*",
+                            "description": "string*"
+                        }
+                    ]
+                }
+            },
             "Organizations": {
                 "operations": {
                     "OrganizationsList": {
@@ -454,7 +913,7 @@
                         "processing_options": {
                             "output_field": null
                         },
-                        "maxSessionCount": 20
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -467,6 +926,27 @@
                             "role": "_:string*",
                             "startOn": "_:string*",
                             "endOn": "_:string*"
+                          }
+                        ],
+                        "credentials": [
+                          {
+                            "type": "string*",
+                            "value": "string*"
+                          }
+                        ],
+                        "addresses": [
+                          {
+                            "address": {
+                              "id": "_:string*"
+                            },
+                            "type": {
+                              "addressType": "_:string*",
+                              "detail": {
+                                "id": "_:string*"
+                              }
+                            },
+                            "startOn": "string*",
+                            "preference": "string*"
                           }
                         ],
                         "phones": [
@@ -508,7 +988,7 @@
                         "processing_options": {
                             "output_field": null
                         },
-                        "maxSessionCount": 20
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -560,7 +1040,7 @@
                         "processing_options": {
                             "output_field": null
                         },
-                        "maxSessionCount": 20
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -583,6 +1063,49 @@
 					"authorizedOn": "string*"
 				}
             },
+            "Phone_Types": {
+                "operations": {
+                    "Phone_TypesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/phone-types"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "phoneType": "string*",
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "Position_Classifications": {
+                "operations": {
+                    "Position_ClassificationsList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/position-classifications"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
             "Positions": {
                 "operations": {
                     "PositionsList": {
@@ -595,7 +1118,7 @@
                         "processing_options": {
                             "output_field": null
                         },
-                        "maxSessionCount": 20
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -603,13 +1126,40 @@
                     "id": "string*",
                     "title": "string*",
                     "shortTitle": "string*",
+                    "isExempt": "boolean*",
+                    "isSalary": "boolean*",
                     "supervisorPositionId": "string*",
                     "alternateSupervisorPositionId": "string*",
                     "timecardType": "string*",
                     "startDate": "string*",
                     "endDate": "string*",
+                    "positionPayScheduleIds": [
+                        "string*"
+                    ],
                     "positionDept": "string*",
                     "positionLocation": "string*"
+                }
+            },
+            "Employment_Classifications": {
+                "operations": {
+                    "Employment_ClassificationsList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/employment-classifications"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "type": "string*",
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
                 }
             },
             "Employment_Departments": {
@@ -624,7 +1174,7 @@
                         "processing_options": {
                             "output_field": null
                         },
-                        "maxSessionCount": 20
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -637,6 +1187,27 @@
                     "endOn": "string*"
                 }
             },
+            "Employment_Termination_Reasons": {
+                "operations": {
+                    "Employment_Termination_ReasonsList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/employment-termination-reasons"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
             "Enrollment_Statuses": {
                 "operations": {
                     "Enrollment_StatusesList": {
@@ -647,7 +1218,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -655,7 +1227,146 @@
                     "id": "string*",
                     "title": "string*",
                     "status": "string*",
-                    "code": "string*"
+                    "code": "string*",
+                    "description": "string*"
+                }
+            },
+            "Fiscal_Periods": {
+                "operations": {
+                    "Fiscal_PeriodsList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/fiscal-periods"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "title": "string*",
+                    "fiscalYear": {
+                        "id": "_:string*"
+                    },
+                    "startOn": "string*",
+                    "endOn": "string*",
+                    "status": "string*",
+                    "id": "string*"
+                }
+            },
+            "Fiscal_Years": {
+                "operations": {
+                    "Fiscal_YearsList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/fiscal-years"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "title": "string*",
+                    "reportingSegment": "string*",
+                    "startOn": "string*",
+                    "endOn": "string*",
+                    "numberOfPeriods": "number*",
+                    "yearEndAdjustment": "string*",
+                    "status": "string*",
+                    "id": "string*"
+                }
+            },
+            "Graduation_Types": {
+                "operations": {
+                    "Graduation_TypesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/graduation-types"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "code": "string*",
+                    "title": "string*",
+                    "description": "string*",
+                    "id": "string*"
+                }
+            },
+            "Identity_Profile_Roles": {
+                "operations": {
+                    "Identity_Profile_RolesList": {
+                        "method": "get",
+                        "pagination": "none",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/identity-profile-roles"
+                        },
+                        "processing_options": {
+                            "output_field": "institutionalRoles"
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "key",
+                "resources": {
+                    "key": "string*",
+                    "title": "string*"
+                }
+            },
+            "Person_Name_Types": {
+                "operations": {
+                    "Person_Name_TypesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/person-name-types"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "category": "string*",
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "Person_Sources": {
+                "operations": {
+                    "Person_SourcesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/person-sources"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
                 }
             },
             "Persons": {
@@ -669,7 +1380,7 @@
                         "processing_options": {
                             "output_field": null
                         },
-                        "maxSessionCount": 20
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -900,6 +1611,34 @@
                     }
                 }
             },
+            "Persons_Username": {
+                "operations": {
+                    "Persons_UsernameList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/persons-username"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "id": "string*",
+                    "orgEntityId": "string*",
+                    "oeOrgEntityEnv": "string*",
+                    "oeeUsername": "string*",
+                    "personIntgId": "string*",
+                    "roles": [
+                        {
+                            "role": "string*"
+                        }
+                    ]
+                }
+            },
             "Person_Filters": {
                 "operations": {
                     "Email_TypesList": {
@@ -910,7 +1649,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -918,6 +1658,390 @@
                     "id": "string*",
                     "title": "string*",
                     "code": "string*"
+                }
+            },
+            "Residency_Types": {
+                "operations": {
+                    "Residency_TypesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/residency-types"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "Rooms": {
+                "operations": {
+                    "RoomsList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/rooms"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "title": "string*",
+                    "description": "string*",
+                    "number": "string*",
+                    "floor": "string*",
+                    "roomTypes": [
+                        {
+                            "type": "_:string*",
+                            "detail": {
+                                "id": "_:string*"
+                            }
+                        }
+                    ],
+                    "occupancies": [
+                        {
+                            "type": "_:string*",
+                            "maxOccupancy": "number*"
+                        }
+                    ],
+                    "building": {
+                        "id": "_:string*"
+                    },
+                    "site": {
+                        "id": "_:string*"
+                    },
+                    "id": "string*"
+                }
+            },
+            "Room_Types": {
+                "operations": {
+                    "Room_TypesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/room-types"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "type": "string*",
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "Sections": {
+                "operations": {
+                    "SectionsList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/sections"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "titles": [
+                        {
+                            "type": {
+                                "id": "_:string*"
+                            },
+                            "value": "string*"
+                        }
+                    ],
+                    "startOn": "string*",
+                    "endOn": "string*",
+                    "code": "string*",
+                    "number": "string*",
+                    "instructionalPlatform": {
+                        "id": "_:string*"
+                    },
+                    "academicPeriod": {
+                        "id": "_:string*"
+                    },
+                    "reportingAcademicPeriod": {
+                        "id": "_:string*"
+                    },
+                    "censusDates": [
+                        "string*"
+                    ],
+                    "course": {
+                        "id": "_:string*"
+                    },
+                    "courseCategories": [
+                        {
+                            "id": "string*"
+                        }
+                    ],
+                    "credits": [
+                        {
+                            "creditCategory": {
+                                "creditType": "_:string*",
+                                "detail": {
+                                    "id": "_:string*"
+                                }
+                            },
+                            "measure": "string*",
+                            "minimum": "_:number*"
+                        }
+                    ],
+                    "site": {
+                        "id": "_:string*"
+                    },
+                    "academicLevels": [
+                        {
+                            "id": "string*"
+                        }
+                    ],
+                    "gradeSchemes": [
+                        {
+                            "id": "string*"
+                        }
+                    ],
+                    "courseLevels": [
+                        {
+                            "id": "string*"
+                        }
+                    ],
+                    "instructionalMethods": [
+                        {
+                            "id": "string*"
+                        }
+                    ],
+                    "hours": [
+                        {
+                            "administrativeInstructionalMethod": {
+                                "id": "_:string*"
+                            },
+                            "minimum": "_:number*"
+                        }
+                    ],
+                    "status": {
+                        "category": "_:string*",
+                        "detail": {
+                            "id": "_:string*"
+                        }
+                    },
+                    "maxEnrollment": "number*",
+                    "waitlist": {
+                        "eligible": "_:string*"
+                    },
+                    "crossListed": "string*",
+                    "owningInstitutionUnits": [
+                        {
+                            "institutionUnit": {
+                                "id": "_:string*"
+                            },
+                            "ownershipPercentage": "number*"
+                        }
+                    ],
+                    "billing": "number*",
+                    "chargeAssessmentMethod": {
+                        "id": "_:string*"
+                    },
+                    "alternateIds": [
+                        {
+                            "title": "string*",
+                            "value": "string*"
+                        }
+                    ],
+                    "id": "string*"
+                }
+            },
+            "Section_Description_Types": {
+                "operations": {
+                    "Section_Description_TypesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/section-description-types"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "Section_Schedule_Information": {
+                "operations": {
+                    "Section_Schedule_InformationList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/section-schedule-information"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "id": "string*",
+                    "sectionsId": "string*",
+                    "sectionTypeTitles": [
+                        {
+                            "typeId": "_:string*",
+                            "typeCode": "_:string*",
+                            "typeTitle": "_:string*",
+                            "typeValue": "_:string*"
+                        }
+                    ],
+                    "sectionStartOn": "string*",
+                    "sectionEndOn": "string*",
+                    "sectionCode": "string*",
+                    "sectionNumber": "string*",
+                    "sectionLocation": "string*",
+                    "sectionAcademicPeriodId": "string*",
+                    "courseId": "string*",
+                    "courseNumber": "string*",
+                    "courseTypeTitles": [
+                        {
+                            "typeId": "_:string*",
+                            "typeCode": "_:string*",
+                            "typeTitle": "_:string*",
+                            "typeValue": "_:string*"
+                        }
+                    ],
+                    "subjectId": "string*",
+                    "subjectAbbreviation": "string*",
+                    "subjectTitle": "string*",
+                    "instructionalEvents": [
+                        {
+                            "instructionalEventId": "string*",
+                            "recurrenceStartOn": "string*",
+                            "recurrenceEndOn": "string*",
+                            "recurrenceRepeatRuleType": "string*",
+                            "recurrenceRepeatRuleInterval": "number*",
+                            "recurrenceRepeatRuleEndDate": "string*",
+                            "instructionalMethod": {
+                                "id": "_:string*",
+                                "abbreviation": "_:string*",
+                                "title": "_:string*",
+                                "online": "_:boolean*"
+                            }
+                        }
+                    ]
+                }
+            },
+            "Section_Statuses": {
+                "operations": {
+                    "Section_StatusesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/section-statuses"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "category": "string*",
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "Section_Title_Types": {
+                "operations": {
+                    "Section_Title_TypesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/section-title-types"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "Sites": {
+                "operations": {
+                    "SitesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/sites"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "Sources": {
+                "operations": {
+                    "SourcesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/sources"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "contexts": [
+                        {
+                            "id": "string*"
+                        }
+                    ],
+                    "status": "string*",
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
                 }
             },
             "Students": {
@@ -930,7 +2054,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -983,7 +2108,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -1004,7 +2130,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -1035,7 +2162,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -1089,6 +2217,27 @@
                     }
                 }
             },
+            "Student_Classifications": {
+                "operations": {
+                    "Student_ClassificationsList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/student-classifications"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "code": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
             "Student_Statuses": {
                 "operations": {
                     "Student_StatusesList": {
@@ -1099,7 +2248,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -1126,7 +2276,8 @@
                         },
                         "processing_options": {
                             "output_field": null
-                        }
+                        },
+                        "maxSessionCount": 10
                     }
                 },
                 "key": "id",
@@ -1141,6 +2292,98 @@
                     "title": "string*",
                     "description": "string*",
                     "code": "string*"
+                }
+            },
+            "Subjects": {
+                "operations": {
+                    "SubjectsList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/subjects"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "abbreviation": "string*",
+                    "title": "string*",
+                    "id": "string*"
+                }
+            },
+            "User_Identity_Profiles": {
+                "operations": {
+                    "User_Identity_ProfilesList": {
+                        "method": "get",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/user-identity-profiles"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "id",
+                "resources": {
+                    "id": "string*",
+                    "dateOfBirth": "string*",
+                    "credentials": [
+                        {
+                            "type": "string*",
+                            "value": "string*"
+                        }
+                    ],
+                    "personIdentity": {
+                        "personName": {
+                            "formattedName": "_:string*",
+                            "givenName": "_:string*",
+                            "familyName": "_:string*",
+                            "middleName": "_:string*",
+                            "preferredGivenName": "_:string*"
+                        }
+                    },
+                    "emailAddress": "string*",
+                    "primaryAddress": {
+                        "postalCode": "_:string*",
+                        "region": "_:string*",
+                        "municipality": "_:string*",
+                        "addressLines": [
+                            "_:string*"
+                        ]
+                    },
+                    "mobilePhone": {
+                        "countryCallingCode": "_:string*",
+                        "number": "_:string*"
+                    },
+                    "institutionalRoles": [
+                        "string*"
+                    ]
+                }
+            },
+            "Version": {
+                "operations": {
+                    "VersionList": {
+                        "method": "get",
+                        "pagination": "none",
+                        "disableCompression": true,
+                        "call": {
+                            "path": "/api/version"
+                        },
+                        "processing_options": {
+                            "output_field": null
+                        },
+                        "maxSessionCount": 10
+                    }
+                },
+                "key": "ProductVersion",
+                "resources": {
+                    "ProductVersion": "string*"
                 }
             }
         }
