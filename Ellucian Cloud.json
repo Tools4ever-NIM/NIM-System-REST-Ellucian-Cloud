@@ -1375,7 +1375,10 @@
                         "method": "get",
                         "disableCompression": true,
                         "call": {
-                            "path": "/api/persons"
+                            "path": "/api/persons",
+                            "extraHeaders": {
+                                "accept": "application/vnd.hedtech.integration.v12+json"
+                            }
                         },
                         "processing_options": {
                             "output_field": null
